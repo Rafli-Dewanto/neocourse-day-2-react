@@ -11,9 +11,17 @@ const DetailJob = () => {
   const navigate = useNavigate();
   const label = ["company", "salary", "description", "category", "area"];
 
+  const currentJob = {
+    ...jobs,
+    status: "pending",
+  };
 
   const submitJob = () => {
-    // todo submit job
+    setUser({
+      ...user,
+      applied_jobs: [...user.applied_jobs, currentJob],
+    });
+    navigate("/profile");
   };
 
   return (
@@ -32,7 +40,6 @@ const DetailJob = () => {
           <>
             <h1 className="mb-4 text-3xl font-semibold">{jobs.position}</h1>
             <div className="mb-8 flex gap-2 ">
-
               {/* label */}
               <div className="label">
                 {label.map((label, index) => (
@@ -54,7 +61,6 @@ const DetailJob = () => {
                   </p>
                 ))}
               </div>
-
             </div>
           </>
         )}

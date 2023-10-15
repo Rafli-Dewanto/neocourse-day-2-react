@@ -17,7 +17,7 @@ const fadeInFromBottom = {
 
 export const CardJob = ({ job, index }) => {
   const { id, position, salary, area, company } = job;
-  
+
   return (
     <motion.div
       variants={fadeInFromBottom}

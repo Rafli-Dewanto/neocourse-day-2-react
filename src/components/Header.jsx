@@ -3,19 +3,22 @@ import useDarkMode from "../hooks/use-dark-mode";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const DarkModeToggle = () => {
-  // todo create a dark mode switch
+  const [darkTheme, setDarkTheme] = useDarkMode();
   return (
-    <h1>toggle dark mode</h1>
-  )
+    <button
+      onClick={() => setDarkTheme(!darkTheme)}
+      className="rounded-full border-2 p-2 text-gray-800 duration-500"
+    >
+      {darkTheme ? <FaSun /> : <FaMoon />}
+    </button>
+  );
 };
 
 const Header = () => {
   return (
-    <header
-      className="w-full bg-slate-50"
-    >
+    <header className="w-full bg-slate-50 dark:bg-black">
       <nav className="container mx-auto flex w-full items-center justify-between px-4 py-4 ">
-        <NavLink to="/" className="text-4xl font-bold">
+        <NavLink to="/" className="text-4xl font-bold dark:text-white">
           Loker
           <span
             className="

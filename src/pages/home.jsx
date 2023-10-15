@@ -1,7 +1,6 @@
 import React from "react";
 import { CardJob } from "../components/card-job";
 import filteredJobs from "../utils/filtered-jobs";
-import MainLayout from "../layouts/main-layout";
 import useJobs from "../hooks/use-jobs";
 import { useAtom } from "jotai";
 import { searchAtom, userAtom } from "../lib/atoms";

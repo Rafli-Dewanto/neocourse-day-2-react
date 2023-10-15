@@ -23,7 +23,7 @@ const userAtom = atom({
       category: "Analyst",
       area: "Accountability",
       id: "1",
-      status: "accepted",
+      status: "pending",
     },
     {
       position: "Human Program Coordinator",
